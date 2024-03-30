@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конвертация чисел между системами счисления через смарт-контракт</title>
+</head>
+<body>
+  <h1>Конвертация чисел между системами счисления через смарт-контракт</h1>
+
+  <form id="conversionForm">
+    <label for="numberInput">Введите число для конвертации:</label>
+    <input type="text" id="numberInput" name="numberInput" required>
+    <label for="fromBaseInput">Из какой системы счисления:</label>
+    <input type="number" id="fromBaseInput" name="fromBaseInput" min="2" max="16" required>
+    <label for="toBaseInput">В какую систему счисления:</label>
+    <input type="number" id="toBaseInput" name="toBaseInput" min="2" max="16" required>
+    <button type="submit">Конвертировать</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+  <script type="text/javascript">
+    window.addEventListener('load', function() {
+      if (typeof window.ethereum !== 'undefined') {
+        console.log('Метамаск обнаружен!');
+      }
+
+      const web3 = new Web3(Web3.givenProvider || 'http://127.0.0.1:7545');
+      const contractAddress = '0x980ed5FDE8e22deEBB6ae37ce4d7d8B9F43A204F'; // Замените на адрес вашего смарт-контракта
+      const contractABI = [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "number",
+          "type": "string"
+        },
+        {
+          "internalType": "uint8",
+          "name": "fromBase",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint8",
+          "name": "toBase",
+          "type": "uint8"
+        }
+      ],
+      "name": "convertNumber",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ];
+      const contract = new web3.eth.Contract(contractABI, contractAddress);
+
+      const form = document.getElementById('conversionForm');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const number = document.getElementById('numberInput').value;
+        const fromBase = document.getElementById('fromBaseInput').value;
+        const toBase = document.getElementById('toBaseInput').value;
+
+        contract.methods.convertNumber(number, fromBase, toBase).call()
+          .then(function(result) {
+            const resultElement = document.getElementById('result');
+            resultElement.textContent = `Результат конвертации: ${result}`;
+          })
+          .catch(function(error) {
+            console.error('Ошибка:', error);
+          });
+      });
+    });
+  </script>
+</body>
+</html>

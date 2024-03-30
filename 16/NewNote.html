@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NewNote</title>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.3.5/dist/web3.min.js"></script>
+</head>
+<body>
+  <h1>NewNote</h1>
+
+  <div>
+    <label for="nameInput">Имя:</label>
+    <input id="nameInput" type="text">
+  </div>
+
+  <div>
+    <label for="numberInput">Номер:</label>
+    <input id="numberInput" type="number">
+  </div>
+
+  <div>
+    <label for="addressInput">Адрес:</label>
+    <input id="addressInput" type="text">
+  </div>
+
+  <button onclick="setUser()">Установить</button>
+  <button onclick="getUser()">Получить</button>
+
+  <div>
+    <h2>Данные пользователя</h2>
+    <p id="userData"></p>
+  </div>
+
+  <script>
+    if (typeof web3 !== 'undefined') {
+      web3 = new Web3(web3.currentProvider);
+    } else {
+      // Set your provider (e.g. Infura)
+      web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:7545'));
+    }
+
+    const contractAddress = '0x38a499aD1704Af8626E52A263C068d3525C59ADF';
+    const contractABI = [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "users",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "number",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "adress",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "number",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "adress",
+          "type": "string"
+        }
+      ],
+      "name": "setUser",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "getUser",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "number",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "adress",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ];
+
+    const contract = new web3.eth.Contract(contractABI, contractAddress);
+
+    async function setUser() {
+      const name = document.getElementById('nameInput').value;
+      const number = document.getElementById('numberInput').value;
+      const address = document.getElementById('addressInput').value;
+
+      await contract.methods.setUser(name, number, address).send({from: '0x4DF3779fCe956b8A15F360f8A066C1E26D2f638b'});
+    }
+
+    async function getUser() {
+      const name = document.getElementById('nameInput').value;
+      const userData = await contract.methods.getUser(name).call();
+      const number = document.getElementById('numberInput').value;
+      const address = document.getElementById('addressInput').value;
+
+      document.getElementById('userData').innerText = `Номер: ${number}, Адрес: ${address}`;
+    }
+  </script>
+</body>
+</html>

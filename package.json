@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "bignumber.js": "^9.1.2",
+    "chai": "^5.0.3",
+    "web3": "^4.3.0"
+  },
+  "devDependencies": {
+    "chai-bignumber": "^3.1.0"
+  }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Smart Contract Interaction</title>
+</head>
+
+<body>
+  <h1>Smart Contract Interaction</h1>
+  <p>Enter values and operation:</p>
+  <input type="text" id="inputA" placeholder="Enter value a (binary)">
+  <input type="text" id="inputB" placeholder="Enter value b (binary)">
+  <select name="operation" id="operation">
+    <option value="AND">AND</option>
+    <option value="OR">OR</option>
+    <option value="NOT">NOT</option>
+    <option value="NAND">NAND</option>
+    <option value="XOR">XOR</option>
+    <option value="NOR">NOR</option>
+  </select>
+  <button onclick="executeOperation()">Execute</button>
+  <p id="result"></p>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.3.5/dist/web3.min.js"></script>
+  <script>
+    // Check if Web3 is injected (e.g., by MetaMask)
+    if (typeof web3 !== 'undefined') {
+      // Use the injected web3 instance
+      web3 = new Web3(web3.currentProvider);
+    } else {
+      // Fallback to a local Web3 provider
+      web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:7545'));
+    }
+
+    // Адрес контракта
+    const contractAddress = '0xDF269608446cd8C567A3fba5a7BFFC147f966575';
+
+    // ABI (Application Binary Interface) контракта
+    const contractABI = [
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "internalType": "uint8",
+            "name": "a",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "b",
+            "type": "uint8"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "operation",
+            "type": "bytes32"
+          }
+        ],
+        "name": "AndOrNot",
+        "outputs": [
+          {
+            "internalType": "uint8",
+            "name": "",
+            "type": "uint8"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "pure",
+        "type": "function"
+      }
+    ];
+
+    // Создаем экземпляр контракта
+    const contract = new web3.eth.Contract(contractABI, contractAddress);
+
+    // Функция для преобразования десятичного числа в двоичное представление
+    // Функция для преобразования десятичного числа в двоичное представление с сохранением ведущих нулей
+    function decimalToBinary(decimalNumber) {
+      return (decimalNumber >>> 0).toString(2).padStart(8, '0'); // Указываем 8, чтобы длина строки была 8 символов (uint8)
+    }
+
+
+    // Функция для выполнения операции
+    // Функция для выполнения операции
+    async function executeOperation() {
+      const a = parseInt(document.getElementById('inputA').value, 2); // Преобразование введенного двоичного числа в десятичное
+      const b = parseInt(document.getElementById('inputB').value, 2); // Преобразование введенного двоичного числа в десятичное
+      const operation = document.getElementById('operation').value;
+
+      // Вызываем метод контракта
+      try {
+        const result = await contract.methods.AndOrNot(a, b, web3.utils.utf8ToHex(operation)).call();
+        const binaryResult = decimalToBinary(result); // Преобразуем результат из десятичного в двоичное число с сохранением ведущих нулей
+        document.getElementById('result').innerText = `Result: (${result}) [${binaryResult}]`; // Отображаем результат в виде двоичного числа с десятичным числом в скобках
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+  </script>
+</body>
+
+</html>

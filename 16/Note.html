@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блокнот</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.3.5/dist/web3.min.js"></script>
+</head>
+
+<body>
+    <h1>Блокнот</h1>
+
+    <div>
+        <label for="nameInput">Имя:</label>
+        <input id="nameInput" type="text">
+    </div>
+
+    <div>
+        <label for="numberInput">Номер:</label>
+        <input id="numberInput" type="number">
+    </div>
+
+    <div>
+        <label for="addressInput">Адрес:</label>
+        <input id="addressInput" type="text">
+    </div>
+
+    <button onclick="setData()">Добавить контакт</button>
+    <button onclick="getData()">Получить последний контакт</button>
+
+    <div>
+        <h2>Информация о последнем контакте</h2>
+        <p id="contractData"></p>
+    </div>
+
+    <script>
+        if (typeof web3 !== 'undefined') {
+            web3 = new Web3(web3.currentProvider);
+        } else {
+            web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:7545'));
+        }
+
+        const contractAddress = '0x9e523adb8100C56923D44d88e8d3f5B2291FBbE2'; // Замените на адрес вашего контракта Note
+        const contractABI = [{
+                "constant": false,
+                "inputs": [{
+                        "internalType": "string",
+                        "name": "newName",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "newNumber",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "newAddress",
+                        "type": "string"
+                    }
+                ],
+                "name": "set",
+                "outputs": [],
+                "payable": false,
+                "stateMutability": "nonpayable",
+                "type": "function"
+            },
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "getLastContact",
+                "outputs": [{
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "",
+                        "type": "string"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            }
+        ];
+
+        const contract = new web3.eth.Contract(contractABI, contractAddress);
+
+        async function setData() {
+            const newName = document.getElementById('nameInput').value;
+            const newNumber = document.getElementById('numberInput').value;
+            const newAddress = document.getElementById('addressInput').value;
+
+            await contract.methods.set(newName, newNumber, newAddress).send({
+                from: '0x6C406ee211AC6ED4F6A4524192012E9520Ed96Ca'
+            });
+        }
+
+        async function getData() {
+            const contractData = await contract.methods.getLastContact().call();
+            const name = contractData[0];
+            const number = contractData[1];
+            const address = contractData[2];
+
+            const contractDataElement = document.getElementById('contractData');
+            contractDataElement.innerHTML = `Имя: ${name}, Номер: ${number}, Адрес: ${address}`;
+        }
+    </script>
+</body>
+
+</html>

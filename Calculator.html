@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор</title>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.3.5/dist/web3.min.js"></script>
+</head>
+<body>
+  <h1>Калькулятор</h1>
+
+  <div>
+    <label for="number1Input">Первое число:</label>
+    <input id="number1Input" type="number">
+  </div>
+
+  <div>
+    <label for="operatorInput">Выбрать (+, -, *, /):</label>
+    <input id="operatorInput" type="text">
+  </div>
+
+  <div>
+    <label for="number2Input">Второе число:</label>
+    <input id="number2Input" type="number">
+  </div>
+
+  <button onclick="calculate()">Вычислить</button>
+
+  <div id="result"></div>
+
+  <script>
+    if (typeof web3 !== 'undefined') {
+      web3 = new Web3(web3.currentProvider);
+    } else {
+      // Set your provider (e.g. Infura)
+      web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:7545'));
+    }
+
+    const contractAddress = '0x564d077fAAB9Ab8441b37cA70F6F3Daef38d25Da';
+    const contractABI = [
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "x",
+            "type": "uint256"
+          },
+          {
+            "name": "oper",
+            "type": "bytes32"
+          },
+          {
+            "name": "y",
+            "type": "uint256"
+          }
+        ],
+        "name": "getCalk",
+        "outputs": [
+          {
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "pure",
+        "type": "function"
+      }
+    ];
+
+    const contract = new web3.eth.Contract(contractABI, contractAddress);
+
+    async function calculate() {
+      const x = document.getElementById('number1Input').value;
+      const oper = web3.utils.fromAscii(document.getElementById('operatorInput').value);
+      const y = document.getElementById('number2Input').value;
+
+      const result = await contract.methods.getCalk(x, oper, y).call();
+
+      document.getElementById('result').innerText = `Результат: ${result}`;
+    }
+  </script>
+</body>
+</html>

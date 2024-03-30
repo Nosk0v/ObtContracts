@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Преобразователь десятичного числа в шестнадцатеричный</title>
+</head>
+<body>
+  <h1>Преобразователь десятичного числа в шестнадцатеричный</h1>
+
+  <form id="decimalToHexForm">
+    <label for="decimalInput">Введите десятичное число (0 до 65535):</label>
+    <input type="number" id="decimalInput" name="decimalInput" min="0" max="65535" required>
+    <button type="submit">Преобразовать</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+  <script type="text/javascript">
+    window.addEventListener('load', function() {
+      if (typeof window.ethereum !== 'undefined') {
+        console.log('Metamask detected!');
+      }
+
+      const web3 = new Web3(Web3.givenProvider || 'http://127.0.0.1:7545');
+      const contractAddress = '0xE2E279f4D1182d6aCa11e746572026E73729E5A7'; // Обновите адрес контракта
+      const contractABI = [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint16",
+          "name": "decimalNumber",
+          "type": "uint16"
+        }
+      ],
+      "name": "BinaryToDecimalSix",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ]; // Обновите ABI контракта
+
+      const contract = new web3.eth.Contract(contractABI, contractAddress);
+
+      const form = document.getElementById('decimalToHexForm');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const decimalNumber = document.getElementById('decimalInput').value;
+
+        contract.methods.BinaryToDecimalSix(decimalNumber).call()
+          .then(function(result) {
+            const resultElement = document.getElementById('result');
+            resultElement.textContent = `Шестнадцатеричный эквивалент десятичного числа ${decimalNumber} равен: ${result}`;
+          })
+          .catch(function(error) {
+            console.error('Ошибка:', error);
+          });
+      });
+    });
+  </script>
+</body>
+</html>

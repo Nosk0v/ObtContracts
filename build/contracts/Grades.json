@@ -1,0 +1,1826 @@
+{
+  "contractName": "Grades",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "results",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "sum",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "average",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "grade",
+          "type": "uint256"
+        }
+      ],
+      "name": "MyGrade",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"title\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"grade\",\"type\":\"uint256\"}],\"name\":\"MyGrade\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"results\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"sum\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"average\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Grades.sol\":\"Grades\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Grades.sol\":{\"keccak256\":\"0x8a84a12dc5f76fd5e6a21bb3e83d8dccfd2b3725d121123d54ec807762d5cd96\",\"urls\":[\"bzz-raw://cb2d36afacd105d4297543361853be3b3ea080baed19b35c3842068a9f7c6c17\",\"dweb:/ipfs/QmdQbCUTynys7Pxfjs6GhcgEprdeEhkHzUfvfZEcgWnrdx\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b506104b7806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80634b13d17d1461003b578063feef496414610118575b600080fd5b6100f46004803603602081101561005157600080fd5b810190808035906020019064010000000081111561006e57600080fd5b82018360208201111561008057600080fd5b803590602001918460018302840111640100000000831117156100a257600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506101dd565b60405180848152602001838152602001828152602001935050505060405180910390f35b6101db6004803603604081101561012e57600080fd5b810190808035906020019064010000000081111561014b57600080fd5b82018360208201111561015d57600080fd5b8035906020019184600183028401116401000000008311171561017f57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019092919050505061021d565b005b6000818051602081018201805184825260208301602085012081835280955050505050506000915090508060000154908060010154908060020154905083565b60008111801561022d5750600681105b61023657600080fd5b6000826040518082805190602001908083835b6020831061026c5780518252602082019150602081019050602083039250610249565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060000160008154809291906001019190505550806000836040518082805190602001908083835b602083106102e957805182526020820191506020810190506020830392506102c6565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020600101600082825401925050819055506000826040518082805190602001908083835b60208310610362578051825260208201915060208101905060208303925061033f565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020600001546000836040518082805190602001908083835b602083106103cf57805182526020820191506020810190506020830392506103ac565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020600101548161040d57fe5b046000836040518082805190602001908083835b602083106104445780518252602082019150602081019050602083039250610421565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060020181905550505056fea265627a7a72315820bb39cac1c8b7d6332cdac01a632d7f72882343352b0723d5d6f0162631f30cdf64736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80634b13d17d1461003b578063feef496414610118575b600080fd5b6100f46004803603602081101561005157600080fd5b810190808035906020019064010000000081111561006e57600080fd5b82018360208201111561008057600080fd5b803590602001918460018302840111640100000000831117156100a257600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506101dd565b60405180848152602001838152602001828152602001935050505060405180910390f35b6101db6004803603604081101561012e57600080fd5b810190808035906020019064010000000081111561014b57600080fd5b82018360208201111561015d57600080fd5b8035906020019184600183028401116401000000008311171561017f57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019092919050505061021d565b005b6000818051602081018201805184825260208301602085012081835280955050505050506000915090508060000154908060010154908060020154905083565b60008111801561022d5750600681105b61023657600080fd5b6000826040518082805190602001908083835b6020831061026c5780518252602082019150602081019050602083039250610249565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060000160008154809291906001019190505550806000836040518082805190602001908083835b602083106102e957805182526020820191506020810190506020830392506102c6565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020600101600082825401925050819055506000826040518082805190602001908083835b60208310610362578051825260208201915060208101905060208303925061033f565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020600001546000836040518082805190602001908083835b602083106103cf57805182526020820191506020810190506020830392506103ac565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020600101548161040d57fe5b046000836040518082805190602001908083835b602083106104445780518252602082019150602081019050602083039250610421565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902060020181905550505056fea265627a7a72315820bb39cac1c8b7d6332cdac01a632d7f72882343352b0723d5d6f0162631f30cdf64736f6c63430005100032",
+  "sourceMap": "66:372:9:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:372:9;;;;;;;",
+  "deployedSourceMap": "66:372:9:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:372:9;;;;;;;;;;;;;;;;;;;;;;;;156:38;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;156:38:9;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;156:38:9;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;156:38:9;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;156:38:9;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;156:38:9;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;198:238;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;198:238:9;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;198:238:9;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;198:238:9;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;198:238:9;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;198:238:9;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;156:38;;;28:7:-1;22:14;169:4;160:7;156:18;147:7;143:32;204:13;198:20;246:8;231:13;224:31;316:4;307:7;303:18;296:4;287:7;283:18;273:49;350:9;335:13;328:32;378:4;366:16;;0:388;;;;156:38:9;;;;;;;;;;;;;;;;;;;;;;;:::o;198:238::-;277:1;269:5;:9;:22;;;;;290:1;282:5;:9;269:22;261:31;;;;;;298:7;306:5;298:14;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;36:153;;182:3;176:10;171:3;164:23;98:2;93:3;89:12;82:19;;123:2;118:3;114:12;107:19;;148:2;143:3;139:12;132:19;;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;298:14:9;;;;;;;;;;;;;;;;;;;;;:21;;;:23;;;;;;;;;;;;;349:5;327:7;335:5;327:14;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;36:153;;182:3;176:10;171:3;164:23;98:2;93:3;89:12;82:19;;123:2;118:3;114:12;107:19;;148:2;143:3;139:12;132:19;;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;327:14:9;;;;;;;;;;;;;;;;;;;;;:18;;;:27;;;;;;;;;;;409:7;417:5;409:14;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;36:153;;182:3;176:10;171:3;164:23;98:2;93:3;89:12;82:19;;123:2;118:3;114:12;107:19;;148:2;143:3;139:12;132:19;;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;409:14:9;;;;;;;;;;;;;;;;;;;;;:21;;;390:7;398:5;390:14;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;36:153;;182:3;176:10;171:3;164:23;98:2;93:3;89:12;82:19;;123:2;118:3;114:12;107:19;;148:2;143:3;139:12;132:19;;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;390:14:9;;;;;;;;;;;;;;;;;;;;;:18;;;:40;;;;;;360:7;368:5;360:14;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;36:153;;182:3;176:10;171:3;164:23;98:2;93:3;89:12;82:19;;123:2;118:3;114:12;107:19;;148:2;143:3;139:12;132:19;;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;360:14:9;;;;;;;;;;;;;;;;;;;;;:22;;:71;;;;198:238;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract Grades {\n  struct Calc {\n    uint amount;\n    uint sum;\n    uint average;\n\n  }\n  mapping(string => Calc) public results;\n  function MyGrade(string memory title, uint grade) public {\n    require(grade > 0 && grade < 6);\n    results[title].amount++;\n    results[title].sum += grade;\n    results[title].average = uint(results[title].sum/results[title].amount);\n  }\n}\n",
+  "sourcePath": "/Users/noskov/Documents/SIMPLECONTRACTSSSS/contracts/Grades.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Grades.sol",
+    "exportedSymbols": {
+      "Grades": [
+        1111
+      ]
+    },
+    "id": 1112,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1051,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:9"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1111,
+        "linearizedBaseContracts": [
+          1111
+        ],
+        "name": "Grades",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Grades.Calc",
+            "id": 1058,
+            "members": [
+              {
+                "constant": false,
+                "id": 1053,
+                "name": "amount",
+                "nodeType": "VariableDeclaration",
+                "scope": 1058,
+                "src": "104:11:9",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1052,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "104:4:9",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1055,
+                "name": "sum",
+                "nodeType": "VariableDeclaration",
+                "scope": 1058,
+                "src": "121:8:9",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1054,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "121:4:9",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 1057,
+                "name": "average",
+                "nodeType": "VariableDeclaration",
+                "scope": 1058,
+                "src": "135:12:9",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 1056,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "135:4:9",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Calc",
+            "nodeType": "StructDefinition",
+            "scope": 1111,
+            "src": "86:67:9",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1062,
+            "name": "results",
+            "nodeType": "VariableDeclaration",
+            "scope": 1111,
+            "src": "156:38:9",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Calc_$1058_storage_$",
+              "typeString": "mapping(string => struct Grades.Calc)"
+            },
+            "typeName": {
+              "id": 1061,
+              "keyType": {
+                "id": 1059,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "164:6:9",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "156:23:9",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Calc_$1058_storage_$",
+                "typeString": "mapping(string => struct Grades.Calc)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 1060,
+                "name": "Calc",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 1058,
+                "src": "174:4:9",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Calc_$1058_storage_ptr",
+                  "typeString": "struct Grades.Calc"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1109,
+              "nodeType": "Block",
+              "src": "255:181:9",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "id": 1076,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 1072,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 1070,
+                            "name": "grade",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1066,
+                            "src": "269:5:9",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": ">",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "hexValue": "30",
+                            "id": 1071,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "277:1:9",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_0_by_1",
+                              "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                          },
+                          "src": "269:9:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "&&",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 1075,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "id": 1073,
+                            "name": "grade",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 1066,
+                            "src": "282:5:9",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "<",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "hexValue": "36",
+                            "id": 1074,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "290:1:9",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_6_by_1",
+                              "typeString": "int_const 6"
+                            },
+                            "value": "6"
+                          },
+                          "src": "282:9:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          }
+                        },
+                        "src": "269:22:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 1069,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        2558,
+                        2559
+                      ],
+                      "referencedDeclaration": 2558,
+                      "src": "261:7:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 1077,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "261:31:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1078,
+                  "nodeType": "ExpressionStatement",
+                  "src": "261:31:9"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1083,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "298:23:9",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 1079,
+                          "name": "results",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1062,
+                          "src": "298:7:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Calc_$1058_storage_$",
+                            "typeString": "mapping(string memory => struct Grades.Calc storage ref)"
+                          }
+                        },
+                        "id": 1081,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 1080,
+                          "name": "title",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1064,
+                          "src": "306:5:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "298:14:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Calc_$1058_storage",
+                          "typeString": "struct Grades.Calc storage ref"
+                        }
+                      },
+                      "id": 1082,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "amount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1053,
+                      "src": "298:21:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1084,
+                  "nodeType": "ExpressionStatement",
+                  "src": "298:23:9"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1090,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 1085,
+                          "name": "results",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1062,
+                          "src": "327:7:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Calc_$1058_storage_$",
+                            "typeString": "mapping(string memory => struct Grades.Calc storage ref)"
+                          }
+                        },
+                        "id": 1087,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 1086,
+                          "name": "title",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1064,
+                          "src": "335:5:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "327:14:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Calc_$1058_storage",
+                          "typeString": "struct Grades.Calc storage ref"
+                        }
+                      },
+                      "id": 1088,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "sum",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1055,
+                      "src": "327:18:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1089,
+                      "name": "grade",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1066,
+                      "src": "349:5:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "327:27:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1091,
+                  "nodeType": "ExpressionStatement",
+                  "src": "327:27:9"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1107,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 1092,
+                          "name": "results",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1062,
+                          "src": "360:7:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Calc_$1058_storage_$",
+                            "typeString": "mapping(string memory => struct Grades.Calc storage ref)"
+                          }
+                        },
+                        "id": 1094,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 1093,
+                          "name": "title",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1064,
+                          "src": "368:5:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "360:14:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Calc_$1058_storage",
+                          "typeString": "struct Grades.Calc storage ref"
+                        }
+                      },
+                      "id": 1095,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "average",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1057,
+                      "src": "360:22:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          },
+                          "id": 1105,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 1097,
+                                "name": "results",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 1062,
+                                "src": "390:7:9",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Calc_$1058_storage_$",
+                                  "typeString": "mapping(string memory => struct Grades.Calc storage ref)"
+                                }
+                              },
+                              "id": 1099,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 1098,
+                                "name": "title",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 1064,
+                                "src": "398:5:9",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "390:14:9",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Calc_$1058_storage",
+                                "typeString": "struct Grades.Calc storage ref"
+                              }
+                            },
+                            "id": 1100,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "sum",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 1055,
+                            "src": "390:18:9",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "/",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 1101,
+                                "name": "results",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 1062,
+                                "src": "409:7:9",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_mapping$_t_string_memory_$_t_struct$_Calc_$1058_storage_$",
+                                  "typeString": "mapping(string memory => struct Grades.Calc storage ref)"
+                                }
+                              },
+                              "id": 1103,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 1102,
+                                "name": "title",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 1064,
+                                "src": "417:5:9",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "409:14:9",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_Calc_$1058_storage",
+                                "typeString": "struct Grades.Calc storage ref"
+                              }
+                            },
+                            "id": 1104,
+                            "isConstant": false,
+                            "isLValue": true,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "amount",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 1053,
+                            "src": "409:21:9",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "390:40:9",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        ],
+                        "id": 1096,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "385:4:9",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_uint256_$",
+                          "typeString": "type(uint256)"
+                        },
+                        "typeName": "uint"
+                      },
+                      "id": 1106,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "385:46:9",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "360:71:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1108,
+                  "nodeType": "ExpressionStatement",
+                  "src": "360:71:9"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1110,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "MyGrade",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1067,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1064,
+                  "name": "title",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1110,
+                  "src": "215:19:9",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 1063,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "215:6:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1066,
+                  "name": "grade",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1110,
+                  "src": "236:10:9",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1065,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "236:4:9",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "214:33:9"
+            },
+            "returnParameters": {
+              "id": 1068,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "255:0:9"
+            },
+            "scope": 1111,
+            "src": "198:238:9",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1112,
+        "src": "66:372:9"
+      }
+    ],
+    "src": "32:407:9"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/Grades.sol",
+      "exportedSymbols": {
+        "Grades": [
+          1111
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".22",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 1051,
+        "name": "PragmaDirective",
+        "src": "32:32:9"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            1111
+          ],
+          "name": "Grades",
+          "scope": 1112
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "Grades.Calc",
+              "name": "Calc",
+              "scope": 1111,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "amount",
+                  "scope": 1058,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 1052,
+                    "name": "ElementaryTypeName",
+                    "src": "104:4:9"
+                  }
+                ],
+                "id": 1053,
+                "name": "VariableDeclaration",
+                "src": "104:11:9"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "sum",
+                  "scope": 1058,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 1054,
+                    "name": "ElementaryTypeName",
+                    "src": "121:4:9"
+                  }
+                ],
+                "id": 1055,
+                "name": "VariableDeclaration",
+                "src": "121:8:9"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "average",
+                  "scope": 1058,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 1056,
+                    "name": "ElementaryTypeName",
+                    "src": "135:4:9"
+                  }
+                ],
+                "id": 1057,
+                "name": "VariableDeclaration",
+                "src": "135:12:9"
+              }
+            ],
+            "id": 1058,
+            "name": "StructDefinition",
+            "src": "86:67:9"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "results",
+              "scope": 1111,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(string => struct Grades.Calc)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(string => struct Grades.Calc)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 1059,
+                    "name": "ElementaryTypeName",
+                    "src": "164:6:9"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Calc",
+                      "referencedDeclaration": 1058,
+                      "type": "struct Grades.Calc"
+                    },
+                    "id": 1060,
+                    "name": "UserDefinedTypeName",
+                    "src": "174:4:9"
+                  }
+                ],
+                "id": 1061,
+                "name": "Mapping",
+                "src": "156:23:9"
+              }
+            ],
+            "id": 1062,
+            "name": "VariableDeclaration",
+            "src": "156:38:9"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "MyGrade",
+              "scope": 1111,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "title",
+                      "scope": 1110,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 1063,
+                        "name": "ElementaryTypeName",
+                        "src": "215:6:9"
+                      }
+                    ],
+                    "id": 1064,
+                    "name": "VariableDeclaration",
+                    "src": "215:19:9"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "grade",
+                      "scope": 1110,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 1065,
+                        "name": "ElementaryTypeName",
+                        "src": "236:4:9"
+                      }
+                    ],
+                    "id": 1066,
+                    "name": "VariableDeclaration",
+                    "src": "236:10:9"
+                  }
+                ],
+                "id": 1067,
+                "name": "ParameterList",
+                "src": "214:33:9"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1068,
+                "name": "ParameterList",
+                "src": "255:0:9"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                2558,
+                                2559
+                              ],
+                              "referencedDeclaration": 2558,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 1069,
+                            "name": "Identifier",
+                            "src": "261:7:9"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "&&",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": ">",
+                                  "type": "bool"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1066,
+                                      "type": "uint256",
+                                      "value": "grade"
+                                    },
+                                    "id": 1070,
+                                    "name": "Identifier",
+                                    "src": "269:5:9"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "30",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "number",
+                                      "type": "int_const 0",
+                                      "value": "0"
+                                    },
+                                    "id": 1071,
+                                    "name": "Literal",
+                                    "src": "277:1:9"
+                                  }
+                                ],
+                                "id": 1072,
+                                "name": "BinaryOperation",
+                                "src": "269:9:9"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "<",
+                                  "type": "bool"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1066,
+                                      "type": "uint256",
+                                      "value": "grade"
+                                    },
+                                    "id": 1073,
+                                    "name": "Identifier",
+                                    "src": "282:5:9"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "36",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "number",
+                                      "type": "int_const 6",
+                                      "value": "6"
+                                    },
+                                    "id": 1074,
+                                    "name": "Literal",
+                                    "src": "290:1:9"
+                                  }
+                                ],
+                                "id": 1075,
+                                "name": "BinaryOperation",
+                                "src": "282:9:9"
+                              }
+                            ],
+                            "id": 1076,
+                            "name": "BinaryOperation",
+                            "src": "269:22:9"
+                          }
+                        ],
+                        "id": 1077,
+                        "name": "FunctionCall",
+                        "src": "261:31:9"
+                      }
+                    ],
+                    "id": 1078,
+                    "name": "ExpressionStatement",
+                    "src": "261:31:9"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "++",
+                          "prefix": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "amount",
+                              "referencedDeclaration": 1053,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct Grades.Calc storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1062,
+                                      "type": "mapping(string memory => struct Grades.Calc storage ref)",
+                                      "value": "results"
+                                    },
+                                    "id": 1079,
+                                    "name": "Identifier",
+                                    "src": "298:7:9"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1064,
+                                      "type": "string memory",
+                                      "value": "title"
+                                    },
+                                    "id": 1080,
+                                    "name": "Identifier",
+                                    "src": "306:5:9"
+                                  }
+                                ],
+                                "id": 1081,
+                                "name": "IndexAccess",
+                                "src": "298:14:9"
+                              }
+                            ],
+                            "id": 1082,
+                            "name": "MemberAccess",
+                            "src": "298:21:9"
+                          }
+                        ],
+                        "id": 1083,
+                        "name": "UnaryOperation",
+                        "src": "298:23:9"
+                      }
+                    ],
+                    "id": 1084,
+                    "name": "ExpressionStatement",
+                    "src": "298:23:9"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "+=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "sum",
+                              "referencedDeclaration": 1055,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct Grades.Calc storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1062,
+                                      "type": "mapping(string memory => struct Grades.Calc storage ref)",
+                                      "value": "results"
+                                    },
+                                    "id": 1085,
+                                    "name": "Identifier",
+                                    "src": "327:7:9"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1064,
+                                      "type": "string memory",
+                                      "value": "title"
+                                    },
+                                    "id": 1086,
+                                    "name": "Identifier",
+                                    "src": "335:5:9"
+                                  }
+                                ],
+                                "id": 1087,
+                                "name": "IndexAccess",
+                                "src": "327:14:9"
+                              }
+                            ],
+                            "id": 1088,
+                            "name": "MemberAccess",
+                            "src": "327:18:9"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1066,
+                              "type": "uint256",
+                              "value": "grade"
+                            },
+                            "id": 1089,
+                            "name": "Identifier",
+                            "src": "349:5:9"
+                          }
+                        ],
+                        "id": 1090,
+                        "name": "Assignment",
+                        "src": "327:27:9"
+                      }
+                    ],
+                    "id": 1091,
+                    "name": "ExpressionStatement",
+                    "src": "327:27:9"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "average",
+                              "referencedDeclaration": 1057,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct Grades.Calc storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1062,
+                                      "type": "mapping(string memory => struct Grades.Calc storage ref)",
+                                      "value": "results"
+                                    },
+                                    "id": 1092,
+                                    "name": "Identifier",
+                                    "src": "360:7:9"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1064,
+                                      "type": "string memory",
+                                      "value": "title"
+                                    },
+                                    "id": 1093,
+                                    "name": "Identifier",
+                                    "src": "368:5:9"
+                                  }
+                                ],
+                                "id": 1094,
+                                "name": "IndexAccess",
+                                "src": "360:14:9"
+                              }
+                            ],
+                            "id": 1095,
+                            "name": "MemberAccess",
+                            "src": "360:22:9"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "uint256",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "type": "type(uint256)",
+                                  "value": "uint"
+                                },
+                                "id": 1096,
+                                "name": "ElementaryTypeNameExpression",
+                                "src": "385:4:9"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "/",
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "sum",
+                                      "referencedDeclaration": 1055,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "type": "struct Grades.Calc storage ref"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 1062,
+                                              "type": "mapping(string memory => struct Grades.Calc storage ref)",
+                                              "value": "results"
+                                            },
+                                            "id": 1097,
+                                            "name": "Identifier",
+                                            "src": "390:7:9"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 1064,
+                                              "type": "string memory",
+                                              "value": "title"
+                                            },
+                                            "id": 1098,
+                                            "name": "Identifier",
+                                            "src": "398:5:9"
+                                          }
+                                        ],
+                                        "id": 1099,
+                                        "name": "IndexAccess",
+                                        "src": "390:14:9"
+                                      }
+                                    ],
+                                    "id": 1100,
+                                    "name": "MemberAccess",
+                                    "src": "390:18:9"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "amount",
+                                      "referencedDeclaration": 1053,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "type": "struct Grades.Calc storage ref"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 1062,
+                                              "type": "mapping(string memory => struct Grades.Calc storage ref)",
+                                              "value": "results"
+                                            },
+                                            "id": 1101,
+                                            "name": "Identifier",
+                                            "src": "409:7:9"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 1064,
+                                              "type": "string memory",
+                                              "value": "title"
+                                            },
+                                            "id": 1102,
+                                            "name": "Identifier",
+                                            "src": "417:5:9"
+                                          }
+                                        ],
+                                        "id": 1103,
+                                        "name": "IndexAccess",
+                                        "src": "409:14:9"
+                                      }
+                                    ],
+                                    "id": 1104,
+                                    "name": "MemberAccess",
+                                    "src": "409:21:9"
+                                  }
+                                ],
+                                "id": 1105,
+                                "name": "BinaryOperation",
+                                "src": "390:40:9"
+                              }
+                            ],
+                            "id": 1106,
+                            "name": "FunctionCall",
+                            "src": "385:46:9"
+                          }
+                        ],
+                        "id": 1107,
+                        "name": "Assignment",
+                        "src": "360:71:9"
+                      }
+                    ],
+                    "id": 1108,
+                    "name": "ExpressionStatement",
+                    "src": "360:71:9"
+                  }
+                ],
+                "id": 1109,
+                "name": "Block",
+                "src": "255:181:9"
+              }
+            ],
+            "id": 1110,
+            "name": "FunctionDefinition",
+            "src": "198:238:9"
+          }
+        ],
+        "id": 1111,
+        "name": "ContractDefinition",
+        "src": "66:372:9"
+      }
+    ],
+    "id": 1112,
+    "name": "SourceUnit",
+    "src": "32:407:9"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x495ff5cF7A78E8f4AeEdd4a95C589e1F20F15648",
+      "transactionHash": "0x96e93273a1970cfcba42582d901ac500dcaa413b785c11a917319abae36e9323"
+    }
+  },
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-03-30T14:40:35.758Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

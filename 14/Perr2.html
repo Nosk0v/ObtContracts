@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Преобразование десятичного числа в двоичное через смарт-контракт</title>
+</head>
+<body>
+  <h1>Преобразование десятичного числа в двоичное через смарт-контракт</h1>
+
+  <form id="binaryToDecimalForm">
+    <label for="binaryInput">Введите десятичное число для преобразования:</label>
+    <input type="number" id="binaryInput" name="binaryInput" required>
+    <button type="submit">Преобразовать</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+  <script type="text/javascript">
+    window.addEventListener('load', function() {
+      if (typeof window.ethereum !== 'undefined') {
+        console.log('Метамаск обнаружен!');
+      }
+
+      const web3 = new Web3(Web3.givenProvider || 'http://127.0.0.1:7545');
+      const contractAddress = '0xb1C378A8b0124e86b2495309d265ae833060D90D'; // Замените на адрес вашего смарт-контракта
+      const contractABI = [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "BinaryNumberTwo",
+          "type": "uint256"
+        }
+      ],
+      "name": "BinaryToDecimalTwo",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ];
+      const contract = new web3.eth.Contract(contractABI, contractAddress);
+      const form = document.getElementById('binaryToDecimalForm');
+      form.addEventListener('submit', async(event) => {
+        event.preventDefault();
+        const binaryNumber = document.getElementById('binaryInput').value;
+
+        contract.methods.BinaryToDecimalTwo(binaryNumber).call()
+          .then(function(result) {
+            const resultElement = document.getElementById('result');
+            resultElement.textContent = `Двоичный эквивалент десятичного числа ${binaryNumber} равен: ${result}`;
+          })
+          .catch(function(error) {
+            console.error('Ошибка:', error);
+          });
+
+      });
+    });
+  </script>
+</body>
+</html>

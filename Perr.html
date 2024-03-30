@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Преобразование восьмеричного числа в десятичное через смарт-контракт</title>
+</head>
+<body>
+  <h1>Преобразование восьмеричного числа в десятичное через смарт-контракт</h1>
+
+  <form id="octalToDecimalForm">
+    <label for="octalInput">Введите восьмеричное число для преобразования:</label>
+    <input type="number" id="octalInput" name="octalInput" min="0" pattern="[0-7]+" title="Введите только восьмеричные цифры (от 0 до 7)" required>
+    <button type="submit">Преобразовать</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+  <script type="text/javascript">
+    window.addEventListener('load', function() {
+      if (typeof window.ethereum !== 'undefined') {
+        console.log('Метамаск обнаружен!');
+      }
+
+      const web3 = new Web3(Web3.givenProvider || 'http://127.0.0.1:7545');
+      const contractAddress = '0x1ECbB816cDB0B2F27336210D63EABF78c33fDc0d'; // Замените на адрес вашего смарт-контракта
+      const contractABI = [
+        // Здесь укажите ABI вашего смарт-контракта
+        {
+          "constant": true,
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "octalnumber",
+              "type": "uint256"
+            }
+          ],
+          "name": "octal",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ],
+          "payable": false,
+          "stateMutability": "pure",
+          "type": "function"
+        }
+      ];
+      const contract = new web3.eth.Contract(contractABI, contractAddress);
+
+      const form = document.getElementById('octalToDecimalForm');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const octalNumber = document.getElementById('octalInput').value;
+
+        contract.methods.octal(octalNumber).call()
+          .then(function(result) {
+            const resultElement = document.getElementById('result');
+            resultElement.textContent = `Десятичный эквивалент восьмеричного числа ${octalNumber} равен: ${result}`;
+          })
+          .catch(function(error) {
+            console.error('Ошибка:', error);
+          });
+      });
+    });
+  </script>
+</body>
+</html>
