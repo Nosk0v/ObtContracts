@@ -39,7 +39,7 @@
   "sourceMap": "69:279:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;69:279:2;;;;;;;",
   "deployedSourceMap": "69:279:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;69:279:2;;;;;;;;;;;;;;;;;;;94:247;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;94:247:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;168:7;183:11;205:9;:4;:9;201:24;;;224:1;222;:3;216:9;;201:24;236:9;:4;:9;232:24;;;255:1;253;:3;247:9;;232:24;267:9;:4;:9;263:24;;;286:1;284;:3;278:9;;263:24;298:9;:4;:9;294:24;;;317:1;315;:3;;;;;;309:9;;294:24;332:3;325:10;;;94:247;;;;;:::o",
   "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.22 <0.9.0;\r\n\r\ncontract Calculator {\r\n  function getCalk(uint256 x, bytes32 oper, uint256 y) public pure returns (uint256){\r\n    uint256 res;\r\n    if (oper==\"+\") res = x+y;\r\n    if (oper==\"-\") res = x-y;\r\n    if (oper==\"*\") res = x*y;\r\n    if (oper==\"/\") res = x/y;\r\n    return res;\r\n  }\r\n\r\n  }\r\n",
-  "sourcePath": "/Users/noskov/Documents/SIMPLECONTRACTSSSS/contracts/Calculator.sol",
+  "sourcePath": "/Users/noskov/Documents/ObtContracts/contracts/Calculator.sol",
   "ast": {
     "absolutePath": "project:/contracts/Calculator.sol",
     "exportedSymbols": {
@@ -1670,12 +1670,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x684f9EF9f26B1A97B18Cf115834aE982f37459f9",
-      "transactionHash": "0xb84d2cc83935773a8642a77b47e79b2f55f65c62bb0fc139b0d7c3aec2800eef"
+      "address": "0x57047E077904EbEC128125a664D031bE4F2a74AD",
+      "transactionHash": "0x3a6860309f844b9177881c10258a72656461f5f2fc8c6d350ae1f08220590300"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-03-30T14:40:34.792Z",
+  "updatedAt": "2024-03-31T09:41:53.505Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

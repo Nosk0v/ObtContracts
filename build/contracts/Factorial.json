@@ -29,7 +29,7 @@
   "sourceMap": "66:165:8:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:165:8;;;;;;;",
   "deployedSourceMap": "66:165:8:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:165:8;;;;;;;;;;;;;;;;;;;89:139;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;89:139:8;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;140:7;154:9;166:1;154:13;;179:6;187:1;179:9;;174:35;193:1;190;:4;174:35;;208:1;205;:4;201:8;;196:3;;;;;;;174:35;;;;222:1;215:8;;;89:139;;;:::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract Factorial {\n  function getFactorial(uint n) public pure returns (uint256){\n    uint256 f = 1 ;\n    for (uint i =1; i<=n; i++) f = f *i;\n    return f;\n  }\n\n}\n\n",
-  "sourcePath": "/Users/noskov/Documents/SIMPLECONTRACTSSSS/contracts/Factorial.sol",
+  "sourcePath": "/Users/noskov/Documents/ObtContracts/contracts/Factorial.sol",
   "ast": {
     "absolutePath": "project:/contracts/Factorial.sol",
     "exportedSymbols": {
@@ -918,12 +918,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x36A01fC3e63f12ebD523D5d10f5479EFa6DBd477",
-      "transactionHash": "0x6eec34c8c6750455b05b676cfd1ba96fbd655d8b4bdbe7d4e82a3e44d4b41500"
+      "address": "0xe1adfba80E20859bF92FB0603D71bd9C8945396F",
+      "transactionHash": "0xdf909c1fa80c04f0a1f58f05bfc9c113ae5fa3a39c1d4313efe6f5f1bff3d3b5"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-03-30T14:40:34.145Z",
+  "updatedAt": "2024-03-31T09:41:52.824Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

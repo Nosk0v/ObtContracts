@@ -23,7 +23,7 @@
   "sourceMap": "66:124:10:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:124:10;;;;;;;",
   "deployedSourceMap": "66:124:10:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:124:10;;;;;;;;;;;;;;;;;;;92:94;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;92:94:10;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;133:13;156:23;;;;;;;;;;;;;;;;;;;92:94;:::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract HelloWorld {\n    function sayHello() public pure returns (string memory) {\n      return \"Hello World!!!\";\n    }\n  }\n",
-  "sourcePath": "/Users/noskov/Documents/SIMPLECONTRACTSSSS/contracts/HelloWorld.sol",
+  "sourcePath": "/Users/noskov/Documents/ObtContracts/contracts/HelloWorld.sol",
   "ast": {
     "absolutePath": "project:/contracts/HelloWorld.sol",
     "exportedSymbols": {
@@ -313,12 +313,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x3756b3A14004C8Eb7A87B5cEa7d383C9FBDdB806",
-      "transactionHash": "0xd1581b5b93a913c6f45e58a2d11be465161ed72c240ace13566a0bc7b6dfa0fb"
+      "address": "0xE7f8d13b583280c3872fC0d12baC3a8925F4C362",
+      "transactionHash": "0x4175c4d1c1a5ee53c8576cb506315f917650c4b8171b9cb8eb7b0c0820cde7b4"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-03-30T14:40:33.987Z",
+  "updatedAt": "2024-03-31T09:41:52.617Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

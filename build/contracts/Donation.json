@@ -83,7 +83,7 @@
   "sourceMap": "66:475:5:-;;;150:56;8:9:-1;5:2;;;30:1;27;20:12;5:2;150:56:5;189:10;181:5;;:18;;;;;;;;;;;;;;;;;;66:475;;;;;;",
   "deployedSourceMap": "66:475:5:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;210:115;;;:::i;:::-;;329:118;;8:9:-1;5:2;;;30:1;27;20:12;5:2;329:118:5;;;:::i;:::-;;88:28;;8:9:-1;5:2;;;30:1;27;20:12;5:2;88:28:5;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;120:25;;8:9:-1;5:2;;;30:1;27;20:12;5:2;120:25:5;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;120:25:5;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;451:88;;8:9:-1;5:2;;;30:1;27;20:12;5:2;451:88:5;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;451:88:5;;;;;;;;;;;;;;;;;210:115;278:10;265:9;:23;;257:32;;;;;;295:8;309:10;295:25;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;295:25:5;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;210:115::o;329:118::-;393:5;;;;;;;;;;;379:19;;:10;:19;;;371:28;;;;;;405:5;;;;;;;;;;;:14;;:37;420:21;405:37;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;405:37:5;329:118::o;88:28::-;;;;;;;;;;;;;:::o;120:25::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;451:88::-;495:16;526:8;519:15;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;451:88;:::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\ncontract Donation {\n  address payable public owner;\n  address[] public donators;\n\n  constructor() public {\n        owner = msg.sender;\n    }\n\n  function gatherDonation() public payable {\n    require(msg.value >= .001 ether);\n    donators.push(msg.sender);\n  }\n\n  function transferToOwner() external {\n    require(msg.sender == owner);\n    owner.transfer(address(this).balance);\n  }\n\n  function getDonators() public view returns (address[] memory) {\n    return donators;\n  }\n}\n",
-  "sourcePath": "/Users/noskov/Documents/SIMPLECONTRACTSSSS/contracts/Donation.sol",
+  "sourcePath": "/Users/noskov/Documents/ObtContracts/contracts/Donation.sol",
   "ast": {
     "absolutePath": "project:/contracts/Donation.sol",
     "exportedSymbols": {
@@ -222,7 +222,7 @@
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2555,
+                        "referencedDeclaration": 2547,
                         "src": "189:3:5",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
@@ -309,7 +309,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2555,
+                            "referencedDeclaration": 2547,
                             "src": "265:3:5",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -368,10 +368,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2558,
-                        2559
+                        2550,
+                        2551
                       ],
-                      "referencedDeclaration": 2558,
+                      "referencedDeclaration": 2550,
                       "src": "257:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -408,7 +408,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 2555,
+                          "referencedDeclaration": 2547,
                           "src": "309:3:5",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -538,7 +538,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2555,
+                            "referencedDeclaration": 2547,
                             "src": "379:3:5",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -592,10 +592,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2558,
-                        2559
+                        2550,
+                        2551
                       ],
-                      "referencedDeclaration": 2558,
+                      "referencedDeclaration": 2550,
                       "src": "371:7:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -635,7 +635,7 @@
                               "name": "this",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 2581,
+                              "referencedDeclaration": 2573,
                               "src": "428:4:5",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_contract$_Donation_$847",
@@ -1062,7 +1062,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 2555,
+                                  "referencedDeclaration": 2547,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -1161,10 +1161,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                2558,
-                                2559
+                                2550,
+                                2551
                               ],
-                              "referencedDeclaration": 2558,
+                              "referencedDeclaration": 2550,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -1205,7 +1205,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 2555,
+                                      "referencedDeclaration": 2547,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -1321,7 +1321,7 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 2555,
+                                  "referencedDeclaration": 2547,
                                   "type": "msg",
                                   "value": "msg"
                                 },
@@ -1420,10 +1420,10 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                2558,
-                                2559
+                                2550,
+                                2551
                               ],
-                              "referencedDeclaration": 2558,
+                              "referencedDeclaration": 2550,
                               "type": "function (bool) pure",
                               "value": "require"
                             },
@@ -1464,7 +1464,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 2555,
+                                      "referencedDeclaration": 2547,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -1611,7 +1611,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 2581,
+                                      "referencedDeclaration": 2573,
                                       "type": "contract Donation",
                                       "value": "this"
                                     },
@@ -1775,12 +1775,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x8FFf82FEB7fa3C113ABa1e59B9eF667A27A2a02f",
-      "transactionHash": "0x2eb11eb902ab933ac4a708cb22ac0524a60fb74f4fd626f8812a38b26254ab23"
+      "address": "0xEc0FF539020E5948cd70ABE9d10694C2cE13BdE0",
+      "transactionHash": "0x802f00f5c1c4050a9bd287a00fd7389796bd637b05ccfe9799c4b77c7cdb4a35"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-03-30T14:40:36.922Z",
+  "updatedAt": "2024-03-31T09:41:55.586Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
