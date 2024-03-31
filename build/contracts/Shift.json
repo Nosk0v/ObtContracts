@@ -39,19 +39,19 @@
   "sourceMap": "69:405:25:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;69:405:25;;;;;;;",
   "deployedSourceMap": "69:405:25:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;69:405:25;;;;;;;;;;;;;;;;;;;91:372;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;91:372:25;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;177:5;246:16;:9;:16;242:165;;;304:5;299:10;;:1;:10;;;;292:17;;;;242:165;331:16;:9;:16;327:80;;;390:5;385:10;;:1;:10;;;;378:17;;;;327:80;417:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;91:372;;;;;;:::o",
   "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.22 <0.9.0;\r\n\r\ncontract Shift {\r\n    function ShiftLeftRight(uint8 a, uint8 shift, bytes32 operation) public pure returns (uint8) {\r\n        \r\n        \r\n     \r\n        \r\n        \r\n        if (operation == \"<\") {\r\n           \r\n            return a << shift;\r\n        } else if (operation == \">\") {\r\n            \r\n            return a >> shift;\r\n        }\r\n        revert(\"Invalid operation\");\r\n         \r\n    }\r\n\r\n    \r\n}",
-  "sourcePath": "/Users/noskov/Documents/SIMPLECONTRACTSSSS/contracts/Shift.sol",
+  "sourcePath": "/Users/noskov/Documents/ObtContracts/contracts/Shift.sol",
   "ast": {
     "absolutePath": "project:/contracts/Shift.sol",
     "exportedSymbols": {
       "Shift": [
-        2242
+        2234
       ]
     },
-    "id": 2243,
+    "id": 2235,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 2207,
+        "id": 2199,
         "literals": [
           "solidity",
           ">=",
@@ -70,16 +70,16 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 2242,
+        "id": 2234,
         "linearizedBaseContracts": [
-          2242
+          2234
         ],
         "name": "Shift",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 2240,
+              "id": 2232,
               "nodeType": "Block",
               "src": "184:279:25",
               "statements": [
@@ -90,18 +90,18 @@
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
                     },
-                    "id": 2220,
+                    "id": 2212,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 2218,
+                      "id": 2210,
                       "name": "operation",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 2213,
+                      "referencedDeclaration": 2205,
                       "src": "246:9:25",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
@@ -113,7 +113,7 @@
                     "rightExpression": {
                       "argumentTypes": null,
                       "hexValue": "3c",
-                      "id": 2219,
+                      "id": 2211,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
@@ -141,18 +141,18 @@
                         "typeIdentifier": "t_bytes32",
                         "typeString": "bytes32"
                       },
-                      "id": 2228,
+                      "id": 2220,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "leftExpression": {
                         "argumentTypes": null,
-                        "id": 2226,
+                        "id": 2218,
                         "name": "operation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 2213,
+                        "referencedDeclaration": 2205,
                         "src": "331:9:25",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
@@ -164,7 +164,7 @@
                       "rightExpression": {
                         "argumentTypes": null,
                         "hexValue": "3e",
-                        "id": 2227,
+                        "id": 2219,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -186,11 +186,11 @@
                       }
                     },
                     "falseBody": null,
-                    "id": 2234,
+                    "id": 2226,
                     "nodeType": "IfStatement",
                     "src": "327:80:25",
                     "trueBody": {
-                      "id": 2233,
+                      "id": 2225,
                       "nodeType": "Block",
                       "src": "349:58:25",
                       "statements": [
@@ -201,18 +201,18 @@
                               "typeIdentifier": "t_uint8",
                               "typeString": "uint8"
                             },
-                            "id": 2231,
+                            "id": 2223,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
                             "lValueRequested": false,
                             "leftExpression": {
                               "argumentTypes": null,
-                              "id": 2229,
+                              "id": 2221,
                               "name": "a",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 2209,
+                              "referencedDeclaration": 2201,
                               "src": "385:1:25",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint8",
@@ -223,11 +223,11 @@
                             "operator": ">>",
                             "rightExpression": {
                               "argumentTypes": null,
-                              "id": 2230,
+                              "id": 2222,
                               "name": "shift",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 2211,
+                              "referencedDeclaration": 2203,
                               "src": "390:5:25",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint8",
@@ -240,19 +240,19 @@
                               "typeString": "uint8"
                             }
                           },
-                          "functionReturnParameters": 2217,
-                          "id": 2232,
+                          "functionReturnParameters": 2209,
+                          "id": 2224,
                           "nodeType": "Return",
                           "src": "378:17:25"
                         }
                       ]
                     }
                   },
-                  "id": 2235,
+                  "id": 2227,
                   "nodeType": "IfStatement",
                   "src": "242:165:25",
                   "trueBody": {
-                    "id": 2225,
+                    "id": 2217,
                     "nodeType": "Block",
                     "src": "264:57:25",
                     "statements": [
@@ -263,18 +263,18 @@
                             "typeIdentifier": "t_uint8",
                             "typeString": "uint8"
                           },
-                          "id": 2223,
+                          "id": 2215,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftExpression": {
                             "argumentTypes": null,
-                            "id": 2221,
+                            "id": 2213,
                             "name": "a",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2209,
+                            "referencedDeclaration": 2201,
                             "src": "299:1:25",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint8",
@@ -285,11 +285,11 @@
                           "operator": "<<",
                           "rightExpression": {
                             "argumentTypes": null,
-                            "id": 2222,
+                            "id": 2214,
                             "name": "shift",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 2211,
+                            "referencedDeclaration": 2203,
                             "src": "304:5:25",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint8",
@@ -302,8 +302,8 @@
                             "typeString": "uint8"
                           }
                         },
-                        "functionReturnParameters": 2217,
-                        "id": 2224,
+                        "functionReturnParameters": 2209,
+                        "id": 2216,
                         "nodeType": "Return",
                         "src": "292:17:25"
                       }
@@ -317,7 +317,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "496e76616c6964206f7065726174696f6e",
-                        "id": 2237,
+                        "id": 2229,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -340,21 +340,21 @@
                           "typeString": "literal_string \"Invalid operation\""
                         }
                       ],
-                      "id": 2236,
+                      "id": 2228,
                       "name": "revert",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        2560,
-                        2561
+                        2552,
+                        2553
                       ],
-                      "referencedDeclaration": 2561,
+                      "referencedDeclaration": 2553,
                       "src": "417:6:25",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_revert_pure$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (string memory) pure"
                       }
                     },
-                    "id": 2238,
+                    "id": 2230,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -368,29 +368,29 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 2239,
+                  "id": 2231,
                   "nodeType": "ExpressionStatement",
                   "src": "417:27:25"
                 }
               ]
             },
             "documentation": null,
-            "id": 2241,
+            "id": 2233,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "ShiftLeftRight",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2214,
+              "id": 2206,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2209,
+                  "id": 2201,
                   "name": "a",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2241,
+                  "scope": 2233,
                   "src": "115:7:25",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -399,7 +399,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 2208,
+                    "id": 2200,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "115:5:25",
@@ -413,10 +413,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2211,
+                  "id": 2203,
                   "name": "shift",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2241,
+                  "scope": 2233,
                   "src": "124:11:25",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -425,7 +425,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 2210,
+                    "id": 2202,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "124:5:25",
@@ -439,10 +439,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 2213,
+                  "id": 2205,
                   "name": "operation",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2241,
+                  "scope": 2233,
                   "src": "137:17:25",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -451,7 +451,7 @@
                     "typeString": "bytes32"
                   },
                   "typeName": {
-                    "id": 2212,
+                    "id": 2204,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
                     "src": "137:7:25",
@@ -467,15 +467,15 @@
               "src": "114:41:25"
             },
             "returnParameters": {
-              "id": 2217,
+              "id": 2209,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 2216,
+                  "id": 2208,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 2241,
+                  "scope": 2233,
                   "src": "177:5:25",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -484,7 +484,7 @@
                     "typeString": "uint8"
                   },
                   "typeName": {
-                    "id": 2215,
+                    "id": 2207,
                     "name": "uint8",
                     "nodeType": "ElementaryTypeName",
                     "src": "177:5:25",
@@ -499,14 +499,14 @@
               ],
               "src": "176:7:25"
             },
-            "scope": 2242,
+            "scope": 2234,
             "src": "91:372:25",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 2243,
+        "scope": 2235,
         "src": "69:405:25"
       }
     ],
@@ -517,7 +517,7 @@
       "absolutePath": "project:/contracts/Shift.sol",
       "exportedSymbols": {
         "Shift": [
-          2242
+          2234
         ]
       }
     },
@@ -534,7 +534,7 @@
             ".0"
           ]
         },
-        "id": 2207,
+        "id": 2199,
         "name": "PragmaDirective",
         "src": "33:32:25"
       },
@@ -550,10 +550,10 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            2242
+            2234
           ],
           "name": "Shift",
-          "scope": 2243
+          "scope": 2235
         },
         "children": [
           {
@@ -566,7 +566,7 @@
                 null
               ],
               "name": "ShiftLeftRight",
-              "scope": 2242,
+              "scope": 2234,
               "stateMutability": "pure",
               "superFunction": null,
               "visibility": "public"
@@ -578,7 +578,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "a",
-                      "scope": 2241,
+                      "scope": 2233,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint8",
@@ -591,12 +591,12 @@
                           "name": "uint8",
                           "type": "uint8"
                         },
-                        "id": 2208,
+                        "id": 2200,
                         "name": "ElementaryTypeName",
                         "src": "115:5:25"
                       }
                     ],
-                    "id": 2209,
+                    "id": 2201,
                     "name": "VariableDeclaration",
                     "src": "115:7:25"
                   },
@@ -604,7 +604,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "shift",
-                      "scope": 2241,
+                      "scope": 2233,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint8",
@@ -617,12 +617,12 @@
                           "name": "uint8",
                           "type": "uint8"
                         },
-                        "id": 2210,
+                        "id": 2202,
                         "name": "ElementaryTypeName",
                         "src": "124:5:25"
                       }
                     ],
-                    "id": 2211,
+                    "id": 2203,
                     "name": "VariableDeclaration",
                     "src": "124:11:25"
                   },
@@ -630,7 +630,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "operation",
-                      "scope": 2241,
+                      "scope": 2233,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bytes32",
@@ -643,17 +643,17 @@
                           "name": "bytes32",
                           "type": "bytes32"
                         },
-                        "id": 2212,
+                        "id": 2204,
                         "name": "ElementaryTypeName",
                         "src": "137:7:25"
                       }
                     ],
-                    "id": 2213,
+                    "id": 2205,
                     "name": "VariableDeclaration",
                     "src": "137:17:25"
                   }
                 ],
-                "id": 2214,
+                "id": 2206,
                 "name": "ParameterList",
                 "src": "114:41:25"
               },
@@ -663,7 +663,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 2241,
+                      "scope": 2233,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint8",
@@ -676,17 +676,17 @@
                           "name": "uint8",
                           "type": "uint8"
                         },
-                        "id": 2215,
+                        "id": 2207,
                         "name": "ElementaryTypeName",
                         "src": "177:5:25"
                       }
                     ],
-                    "id": 2216,
+                    "id": 2208,
                     "name": "VariableDeclaration",
                     "src": "177:5:25"
                   }
                 ],
-                "id": 2217,
+                "id": 2209,
                 "name": "ParameterList",
                 "src": "176:7:25"
               },
@@ -715,11 +715,11 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 2213,
+                              "referencedDeclaration": 2205,
                               "type": "bytes32",
                               "value": "operation"
                             },
-                            "id": 2218,
+                            "id": 2210,
                             "name": "Identifier",
                             "src": "246:9:25"
                           },
@@ -736,12 +736,12 @@
                               "type": "literal_string \"<\"",
                               "value": "<"
                             },
-                            "id": 2219,
+                            "id": 2211,
                             "name": "Literal",
                             "src": "259:3:25"
                           }
                         ],
-                        "id": 2220,
+                        "id": 2212,
                         "name": "BinaryOperation",
                         "src": "246:16:25"
                       },
@@ -749,7 +749,7 @@
                         "children": [
                           {
                             "attributes": {
-                              "functionReturnParameters": 2217
+                              "functionReturnParameters": 2209
                             },
                             "children": [
                               {
@@ -773,11 +773,11 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 2209,
+                                      "referencedDeclaration": 2201,
                                       "type": "uint8",
                                       "value": "a"
                                     },
-                                    "id": 2221,
+                                    "id": 2213,
                                     "name": "Identifier",
                                     "src": "299:1:25"
                                   },
@@ -787,26 +787,26 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 2211,
+                                      "referencedDeclaration": 2203,
                                       "type": "uint8",
                                       "value": "shift"
                                     },
-                                    "id": 2222,
+                                    "id": 2214,
                                     "name": "Identifier",
                                     "src": "304:5:25"
                                   }
                                 ],
-                                "id": 2223,
+                                "id": 2215,
                                 "name": "BinaryOperation",
                                 "src": "299:10:25"
                               }
                             ],
-                            "id": 2224,
+                            "id": 2216,
                             "name": "Return",
                             "src": "292:17:25"
                           }
                         ],
-                        "id": 2225,
+                        "id": 2217,
                         "name": "Block",
                         "src": "264:57:25"
                       },
@@ -836,11 +836,11 @@
                                   "overloadedDeclarations": [
                                     null
                                   ],
-                                  "referencedDeclaration": 2213,
+                                  "referencedDeclaration": 2205,
                                   "type": "bytes32",
                                   "value": "operation"
                                 },
-                                "id": 2226,
+                                "id": 2218,
                                 "name": "Identifier",
                                 "src": "331:9:25"
                               },
@@ -857,12 +857,12 @@
                                   "type": "literal_string \">\"",
                                   "value": ">"
                                 },
-                                "id": 2227,
+                                "id": 2219,
                                 "name": "Literal",
                                 "src": "344:3:25"
                               }
                             ],
-                            "id": 2228,
+                            "id": 2220,
                             "name": "BinaryOperation",
                             "src": "331:16:25"
                           },
@@ -870,7 +870,7 @@
                             "children": [
                               {
                                 "attributes": {
-                                  "functionReturnParameters": 2217
+                                  "functionReturnParameters": 2209
                                 },
                                 "children": [
                                   {
@@ -894,11 +894,11 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 2209,
+                                          "referencedDeclaration": 2201,
                                           "type": "uint8",
                                           "value": "a"
                                         },
-                                        "id": 2229,
+                                        "id": 2221,
                                         "name": "Identifier",
                                         "src": "385:1:25"
                                       },
@@ -908,36 +908,36 @@
                                           "overloadedDeclarations": [
                                             null
                                           ],
-                                          "referencedDeclaration": 2211,
+                                          "referencedDeclaration": 2203,
                                           "type": "uint8",
                                           "value": "shift"
                                         },
-                                        "id": 2230,
+                                        "id": 2222,
                                         "name": "Identifier",
                                         "src": "390:5:25"
                                       }
                                     ],
-                                    "id": 2231,
+                                    "id": 2223,
                                     "name": "BinaryOperation",
                                     "src": "385:10:25"
                                   }
                                 ],
-                                "id": 2232,
+                                "id": 2224,
                                 "name": "Return",
                                 "src": "378:17:25"
                               }
                             ],
-                            "id": 2233,
+                            "id": 2225,
                             "name": "Block",
                             "src": "349:58:25"
                           }
                         ],
-                        "id": 2234,
+                        "id": 2226,
                         "name": "IfStatement",
                         "src": "327:80:25"
                       }
                     ],
-                    "id": 2235,
+                    "id": 2227,
                     "name": "IfStatement",
                     "src": "242:165:25"
                   },
@@ -967,14 +967,14 @@
                                 }
                               ],
                               "overloadedDeclarations": [
-                                2560,
-                                2561
+                                2552,
+                                2553
                               ],
-                              "referencedDeclaration": 2561,
+                              "referencedDeclaration": 2553,
                               "type": "function (string memory) pure",
                               "value": "revert"
                             },
-                            "id": 2236,
+                            "id": 2228,
                             "name": "Identifier",
                             "src": "417:6:25"
                           },
@@ -991,37 +991,37 @@
                               "type": "literal_string \"Invalid operation\"",
                               "value": "Invalid operation"
                             },
-                            "id": 2237,
+                            "id": 2229,
                             "name": "Literal",
                             "src": "424:19:25"
                           }
                         ],
-                        "id": 2238,
+                        "id": 2230,
                         "name": "FunctionCall",
                         "src": "417:27:25"
                       }
                     ],
-                    "id": 2239,
+                    "id": 2231,
                     "name": "ExpressionStatement",
                     "src": "417:27:25"
                   }
                 ],
-                "id": 2240,
+                "id": 2232,
                 "name": "Block",
                 "src": "184:279:25"
               }
             ],
-            "id": 2241,
+            "id": 2233,
             "name": "FunctionDefinition",
             "src": "91:372:25"
           }
         ],
-        "id": 2242,
+        "id": 2234,
         "name": "ContractDefinition",
         "src": "69:405:25"
       }
     ],
-    "id": 2243,
+    "id": 2235,
     "name": "SourceUnit",
     "src": "33:441:25"
   },
@@ -1033,12 +1033,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xf27477C8d83B738D93319Ba51CA82Bec668c24E9",
-      "transactionHash": "0x670ce3b967fe9f070f216ee09ca80edd671a84908548b72a6d8ea66cb7be98bb"
+      "address": "0x8a8eE0d879362052B4e0b59C0161107E6DE2946B",
+      "transactionHash": "0xea71ec817af493a0f289e3406fea04bd426fe6acaa5d3b27fe38a00cd052de52"
     }
   },
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-03-30T14:40:35.328Z",
+  "updatedAt": "2024-03-31T09:41:54.004Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

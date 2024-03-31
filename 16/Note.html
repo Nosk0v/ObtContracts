@@ -18,16 +18,11 @@
 
     <div>
         <label for="numberInput">Номер:</label>
-        <input id="numberInput" type="number">
+        <input id="numberInput" type="text">
     </div>
 
-    <div>
-        <label for="addressInput">Адрес:</label>
-        <input id="addressInput" type="text">
-    </div>
-
-    <button onclick="setData()">Добавить контакт</button>
-    <button onclick="getData()">Получить последний контакт</button>
+    <button onclick="set()">Добавить контакт</button>
+    <button onclick="get()">Получить последний контакт</button>
 
     <div>
         <h2>Информация о последнем контакте</h2>
@@ -41,22 +36,51 @@
             web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:7545'));
         }
 
-        const contractAddress = '0x9e523adb8100C56923D44d88e8d3f5B2291FBbE2'; // Замените на адрес вашего контракта Note
-        const contractABI = [{
+        const contractAddress = '0x0f0C8e3e1356Bc4fb5c3579Aa0d8d8b0B90b06C2'; // Замените на адрес вашего контракта Note
+        const contractABI = [
+            {
+                "constant": true,
+                "inputs": [],
+                "name": "get",
+                "outputs": [
+                    {
+                        "components": [
+                            {
+                                "internalType": "string",
+                                "name": "name",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "string",
+                                "name": "number",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "address",
+                                "name": "noteAddress",
+                                "type": "address"
+                            }
+                        ],
+                        "internalType": "struct Note.note",
+                        "name": "",
+                        "type": "tuple"
+                    }
+                ],
+                "payable": false,
+                "stateMutability": "view",
+                "type": "function"
+            },
+            {
                 "constant": false,
-                "inputs": [{
+                "inputs": [
+                    {
                         "internalType": "string",
                         "name": "newName",
                         "type": "string"
                     },
                     {
-                        "internalType": "uint256",
-                        "name": "newNumber",
-                        "type": "uint256"
-                    },
-                    {
                         "internalType": "string",
-                        "name": "newAddress",
+                        "name": "newNumber",
                         "type": "string"
                     }
                 ],
@@ -65,50 +89,25 @@
                 "payable": false,
                 "stateMutability": "nonpayable",
                 "type": "function"
-            },
-            {
-                "constant": true,
-                "inputs": [],
-                "name": "getLastContact",
-                "outputs": [{
-                        "internalType": "string",
-                        "name": "",
-                        "type": "string"
-                    },
-                    {
-                        "internalType": "uint256",
-                        "name": "",
-                        "type": "uint256"
-                    },
-                    {
-                        "internalType": "string",
-                        "name": "",
-                        "type": "string"
-                    }
-                ],
-                "payable": false,
-                "stateMutability": "view",
-                "type": "function"
             }
         ];
 
         const contract = new web3.eth.Contract(contractABI, contractAddress);
 
-        async function setData() {
+        async function set() {
             const newName = document.getElementById('nameInput').value;
             const newNumber = document.getElementById('numberInput').value;
-            const newAddress = document.getElementById('addressInput').value;
-
-            await contract.methods.set(newName, newNumber, newAddress).send({
-                from: '0x6C406ee211AC6ED4F6A4524192012E9520Ed96Ca'
+            // Адрес из JavaScript не требуется, так как он будет автоматически записан контрактом в адрес отправителя
+            await contract.methods.set(newName, newNumber).send({
+                from: web3.eth.defaultAccount
             });
         }
 
-        async function getData() {
-            const contractData = await contract.methods.getLastContact().call();
-            const name = contractData[0];
-            const number = contractData[1];
-            const address = contractData[2];
+        async function get() {
+            const contractData = await contract.methods.get().call();
+            const name = contractData.name;
+            const number = contractData.number;
+            const address = contractData.noteAddress;
 
             const contractDataElement = document.getElementById('contractData');
             contractDataElement.innerHTML = `Имя: ${name}, Номер: ${number}, Адрес: ${address}`;

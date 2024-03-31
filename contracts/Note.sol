@@ -1,18 +1,22 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.22 <0.9.0;
 
-contract Note {
-    string public lastContactName;
-    uint public lastContactNumber;
-    string public lastContactAddress;
+pragma experimental ABIEncoderV2;
 
-    function set(string memory newName, uint newNumber, string memory newAddress) public {
-        lastContactName = newName;
-        lastContactNumber = newNumber;
-        lastContactAddress = newAddress;
+contract Note {
+    struct note {
+        string name;
+        string number;
+        address noteAddress;
     }
 
-    function getLastContact() public view returns (string memory, uint, string memory) {
-        return (lastContactName, lastContactNumber, lastContactAddress);
+    mapping(uint256 => note) public notes;
+
+    function set(string memory newName, string memory newNumber, address newAddress) public {
+        notes[0] = note(newName, newNumber, newAddress);
+    }
+
+    function get() public view returns (note memory) {
+        return notes[0];
     }
 }
