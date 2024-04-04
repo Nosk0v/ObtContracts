@@ -31,22 +31,22 @@
   "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"base\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"exponent\",\"type\":\"uint256\"}],\"name\":\"calculatePower\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/PowerCalculator.sol\":\"PowerCalculator\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/PowerCalculator.sol\":{\"keccak256\":\"0xeb122bae1d3ff3cd8cb757264ab0774888edcc632dddd2204b5cb7481b9da5ff\",\"urls\":[\"bzz-raw://cb9fb6fe66a3ca9a3e731ac21cc49e939e54ef18d02a234f6b15560dd45cb019\",\"dweb:/ipfs/QmYGvcP7MMAzwJ42xv6ygeLAV8UrmTY82G71oj4hjpa34f\"]}},\"version\":1}",
   "bytecode": "0x608060405234801561001057600080fd5b5060b88061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063f979f26914602d575b600080fd5b606060048036036040811015604157600080fd5b8101908080359060200190929190803590602001909291905050506076565b6040518082815260200191505060405180910390f35b600081830a90509291505056fea265627a7a72315820f3a6e43041e7561215d4c10ab50b6bc614063756ebdbfc0a179fd760fe3492d764736f6c63430005100032",
   "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c8063f979f26914602d575b600080fd5b606060048036036040811015604157600080fd5b8101908080359060200190929190803590602001909291905050506076565b6040518082815260200191505060405180910390f35b600081830a90509291505056fea265627a7a72315820f3a6e43041e7561215d4c10ab50b6bc614063756ebdbfc0a179fd760fe3492d764736f6c63430005100032",
-  "sourceMap": "69:154:21:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;69:154:21;;;;;;;",
-  "deployedSourceMap": "69:154:21:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;69:154:21;;;;;;;;;;;;;;;;;;;101:119;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;101:119:21;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;172:4;204:8;196:4;:16;189:23;;101:119;;;;:::o",
+  "sourceMap": "69:154:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;69:154:2;;;;;;;",
+  "deployedSourceMap": "69:154:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;69:154:2;;;;;;;;;;;;;;;;;;;101:119;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;101:119:2;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;172:4;204:8;196:4;:16;189:23;;101:119;;;;:::o",
   "source": "// SPDX-License-Identifier: MIT\r\npragma solidity >=0.4.22 <0.9.0;\r\n\r\ncontract PowerCalculator {\r\n    function calculatePower(uint base, uint exponent) public pure returns (uint) {\r\n        return base ** exponent;\r\n    }\r\n}",
   "sourcePath": "/Users/noskov/Documents/ObtContracts/contracts/PowerCalculator.sol",
   "ast": {
     "absolutePath": "project:/contracts/PowerCalculator.sol",
     "exportedSymbols": {
       "PowerCalculator": [
-        1950
+        198
       ]
     },
-    "id": 1951,
+    "id": 199,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1935,
+        "id": 183,
         "literals": [
           "solidity",
           ">=",
@@ -57,7 +57,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "33:32:21"
+        "src": "33:32:2"
       },
       {
         "baseContracts": [],
@@ -65,18 +65,18 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1950,
+        "id": 198,
         "linearizedBaseContracts": [
-          1950
+          198
         ],
         "name": "PowerCalculator",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 1948,
+              "id": 196,
               "nodeType": "Block",
-              "src": "178:42:21",
+              "src": "178:42:2",
               "statements": [
                 {
                   "expression": {
@@ -85,19 +85,19 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 1946,
+                    "id": 194,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
                       "argumentTypes": null,
-                      "id": 1944,
+                      "id": 192,
                       "name": "base",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1937,
-                      "src": "196:4:21",
+                      "referencedDeclaration": 185,
+                      "src": "196:4:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -107,48 +107,48 @@
                     "operator": "**",
                     "rightExpression": {
                       "argumentTypes": null,
-                      "id": 1945,
+                      "id": 193,
                       "name": "exponent",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1939,
-                      "src": "204:8:21",
+                      "referencedDeclaration": 187,
+                      "src": "204:8:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "196:16:21",
+                    "src": "196:16:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1943,
-                  "id": 1947,
+                  "functionReturnParameters": 191,
+                  "id": 195,
                   "nodeType": "Return",
-                  "src": "189:23:21"
+                  "src": "189:23:2"
                 }
               ]
             },
             "documentation": null,
-            "id": 1949,
+            "id": 197,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "calculatePower",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1940,
+              "id": 188,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1937,
+                  "id": 185,
                   "name": "base",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1949,
-                  "src": "125:9:21",
+                  "scope": 197,
+                  "src": "125:9:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -156,10 +156,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1936,
+                    "id": 184,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "125:4:21",
+                    "src": "125:4:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -170,11 +170,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1939,
+                  "id": 187,
                   "name": "exponent",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1949,
-                  "src": "136:13:21",
+                  "scope": 197,
+                  "src": "136:13:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -182,10 +182,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1938,
+                    "id": 186,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "136:4:21",
+                    "src": "136:4:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -195,19 +195,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "124:26:21"
+              "src": "124:26:2"
             },
             "returnParameters": {
-              "id": 1943,
+              "id": 191,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1942,
+                  "id": 190,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1949,
-                  "src": "172:4:21",
+                  "scope": 197,
+                  "src": "172:4:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -215,10 +215,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1941,
+                    "id": 189,
                     "name": "uint",
                     "nodeType": "ElementaryTypeName",
-                    "src": "172:4:21",
+                    "src": "172:4:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -228,27 +228,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "171:6:21"
+              "src": "171:6:2"
             },
-            "scope": 1950,
-            "src": "101:119:21",
+            "scope": 198,
+            "src": "101:119:2",
             "stateMutability": "pure",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 1951,
-        "src": "69:154:21"
+        "scope": 199,
+        "src": "69:154:2"
       }
     ],
-    "src": "33:190:21"
+    "src": "33:190:2"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "project:/contracts/PowerCalculator.sol",
       "exportedSymbols": {
         "PowerCalculator": [
-          1950
+          198
         ]
       }
     },
@@ -265,9 +265,9 @@
             ".0"
           ]
         },
-        "id": 1935,
+        "id": 183,
         "name": "PragmaDirective",
-        "src": "33:32:21"
+        "src": "33:32:2"
       },
       {
         "attributes": {
@@ -281,10 +281,10 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            1950
+            198
           ],
           "name": "PowerCalculator",
-          "scope": 1951
+          "scope": 199
         },
         "children": [
           {
@@ -297,7 +297,7 @@
                 null
               ],
               "name": "calculatePower",
-              "scope": 1950,
+              "scope": 198,
               "stateMutability": "pure",
               "superFunction": null,
               "visibility": "public"
@@ -309,7 +309,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "base",
-                      "scope": 1949,
+                      "scope": 197,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -322,20 +322,20 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 1936,
+                        "id": 184,
                         "name": "ElementaryTypeName",
-                        "src": "125:4:21"
+                        "src": "125:4:2"
                       }
                     ],
-                    "id": 1937,
+                    "id": 185,
                     "name": "VariableDeclaration",
-                    "src": "125:9:21"
+                    "src": "125:9:2"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "exponent",
-                      "scope": 1949,
+                      "scope": 197,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -348,19 +348,19 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 1938,
+                        "id": 186,
                         "name": "ElementaryTypeName",
-                        "src": "136:4:21"
+                        "src": "136:4:2"
                       }
                     ],
-                    "id": 1939,
+                    "id": 187,
                     "name": "VariableDeclaration",
-                    "src": "136:13:21"
+                    "src": "136:13:2"
                   }
                 ],
-                "id": 1940,
+                "id": 188,
                 "name": "ParameterList",
-                "src": "124:26:21"
+                "src": "124:26:2"
               },
               {
                 "children": [
@@ -368,7 +368,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 1949,
+                      "scope": 197,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -381,25 +381,25 @@
                           "name": "uint",
                           "type": "uint256"
                         },
-                        "id": 1941,
+                        "id": 189,
                         "name": "ElementaryTypeName",
-                        "src": "172:4:21"
+                        "src": "172:4:2"
                       }
                     ],
-                    "id": 1942,
+                    "id": 190,
                     "name": "VariableDeclaration",
-                    "src": "172:4:21"
+                    "src": "172:4:2"
                   }
                 ],
-                "id": 1943,
+                "id": 191,
                 "name": "ParameterList",
-                "src": "171:6:21"
+                "src": "171:6:2"
               },
               {
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 1943
+                      "functionReturnParameters": 191
                     },
                     "children": [
                       {
@@ -423,13 +423,13 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1937,
+                              "referencedDeclaration": 185,
                               "type": "uint256",
                               "value": "base"
                             },
-                            "id": 1944,
+                            "id": 192,
                             "name": "Identifier",
-                            "src": "196:4:21"
+                            "src": "196:4:2"
                           },
                           {
                             "attributes": {
@@ -437,59 +437,51 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 1939,
+                              "referencedDeclaration": 187,
                               "type": "uint256",
                               "value": "exponent"
                             },
-                            "id": 1945,
+                            "id": 193,
                             "name": "Identifier",
-                            "src": "204:8:21"
+                            "src": "204:8:2"
                           }
                         ],
-                        "id": 1946,
+                        "id": 194,
                         "name": "BinaryOperation",
-                        "src": "196:16:21"
+                        "src": "196:16:2"
                       }
                     ],
-                    "id": 1947,
+                    "id": 195,
                     "name": "Return",
-                    "src": "189:23:21"
+                    "src": "189:23:2"
                   }
                 ],
-                "id": 1948,
+                "id": 196,
                 "name": "Block",
-                "src": "178:42:21"
+                "src": "178:42:2"
               }
             ],
-            "id": 1949,
+            "id": 197,
             "name": "FunctionDefinition",
-            "src": "101:119:21"
+            "src": "101:119:2"
           }
         ],
-        "id": 1950,
+        "id": 198,
         "name": "ContractDefinition",
-        "src": "69:154:21"
+        "src": "69:154:2"
       }
     ],
-    "id": 1951,
+    "id": 199,
     "name": "SourceUnit",
-    "src": "33:190:21"
+    "src": "33:190:2"
   },
   "compiler": {
     "name": "solc",
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
-  "networks": {
-    "5777": {
-      "events": {},
-      "links": {},
-      "address": "0x1378AECad2fDAF7D9941B96E3bb352EbEd82aD05",
-      "transactionHash": "0xbd706f1acaf1938baae0e1736fce3fe411640e7b6b003351f7eedef42ada24dd"
-    }
-  },
+  "networks": {},
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-03-31T09:41:53.907Z",
-  "networkType": "ethereum",
+  "updatedAt": "2024-04-04T14:41:00.556Z",
   "devdoc": {
     "methods": {}
   },
