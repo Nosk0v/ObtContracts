@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.22 <0.9.0;
 
-contract BitwiseOperations {
+contract Polit1 {
     function AndOrNot(uint8 a, uint8 b, bytes32 operation) public pure returns (uint8) {
         if (operation == "AND") {
             return a & b; // Побитовое AND

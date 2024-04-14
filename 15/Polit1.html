@@ -33,42 +33,42 @@
     }
 
     // Адрес контракта
-    const contractAddress = '0xDF269608446cd8C567A3fba5a7BFFC147f966575';
+    const contractAddress = '0x4421e4252B675BA66889d14F976CCa7d8643DBed';
 
     // ABI (Application Binary Interface) контракта
     const contractABI = [
-      {
-        "constant": true,
-        "inputs": [
-          {
-            "internalType": "uint8",
-            "name": "a",
-            "type": "uint8"
-          },
-          {
-            "internalType": "uint8",
-            "name": "b",
-            "type": "uint8"
-          },
-          {
-            "internalType": "bytes32",
-            "name": "operation",
-            "type": "bytes32"
-          }
-        ],
-        "name": "AndOrNot",
-        "outputs": [
-          {
-            "internalType": "uint8",
-            "name": "",
-            "type": "uint8"
-          }
-        ],
-        "payable": false,
-        "stateMutability": "pure",
-        "type": "function"
-      }
-    ];
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "a",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint8",
+          "name": "b",
+          "type": "uint8"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "operation",
+          "type": "bytes32"
+        }
+      ],
+      "name": "AndOrNot",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ];
 
     // Создаем экземпляр контракта
     const contract = new web3.eth.Contract(contractABI, contractAddress);
