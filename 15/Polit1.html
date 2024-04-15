@@ -33,7 +33,7 @@
     }
 
     // Адрес контракта
-    const contractAddress = '0x4421e4252B675BA66889d14F976CCa7d8643DBed';
+    const contractAddress = '0x1D9bedb30D6B87901B14e8ae6d7E11A615fC0B7e';
 
     // ABI (Application Binary Interface) контракта
     const contractABI = [
@@ -76,7 +76,7 @@
     // Функция для преобразования десятичного числа в двоичное представление
     // Функция для преобразования десятичного числа в двоичное представление с сохранением ведущих нулей
     function decimalToBinary(decimalNumber) {
-      return (decimalNumber >>> 0).toString(2).padStart(8, '0'); // Указываем 8, чтобы длина строки была 8 символов (uint8)
+      return (decimalNumber >>> 0).toString(2).padStart(8, ''); // Указываем 8, чтобы длина строки была 8 символов (uint8)
     }
 
 
